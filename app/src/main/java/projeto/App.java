@@ -1,20 +1,10 @@
 package projeto;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -22,10 +12,27 @@ import com.google.gson.JsonParser;
 
 public class App {
     public static void main(String[] args) {
-        // getSoma();
-        // getFibonacci();
-        // getCalculeDias();
+        // Questão 1
+        getSoma();
+        // Questão 2
+        getFibonacci();
+        // Questão 3
+        getCalculeDias();
+        // Questão 4
         getFaturamentoMensal();
+        // Questão 5
+        getInvertString("Ola mundo");
+
+    }
+
+    private static void getInvertString(String string) {
+        String[] stringSplit = string.split("");
+        StringBuilder builder = new StringBuilder();
+        for (int i = (stringSplit.length - 1); i >= 0; i--) {
+            String letra = stringSplit[i];
+            builder.append(letra);
+        }
+        System.out.println(builder);
     }
 
     private static void getFaturamentoMensal() {
